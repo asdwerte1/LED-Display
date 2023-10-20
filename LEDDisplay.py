@@ -8,7 +8,7 @@ def led_display():
 
     #create a list of the values to print
     values = {
-        "1": "  #\n" * 5,
+        "1": "  #\n  #\n  #\n  #\n  #",
         "2": "###\n  #\n###\n#  \n###",
         "3": "###\n  #\n###\n  #\n###",
         "4": "# #\n# #\n###\n  #\n  #",
@@ -24,7 +24,11 @@ def led_display():
     stringInput = str(num)
     numList = []
     for i in stringInput:
-        numList.append(i)
+        numList.append(values[i])
+
+    #Output the values
+    for i in numList:
+        print(i, end=" ")
 
 
 led_display()
